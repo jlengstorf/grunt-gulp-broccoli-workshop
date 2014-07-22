@@ -24,6 +24,7 @@
 html {
     background-color: @light-color;
     color: lighten(@dark-color, 15%);
+    font-family: sans-serif;
     font-size: 16px;
     line-height: 20px;
     text-align: center;
@@ -38,6 +39,7 @@ h1 {
     color: @dark-color;
     font-family: 'monstro-web', sans-serif;
     font-size: 40px;
+    font-weight: normal;
     line-height: 40px;
 
     @media (min-width: 650px) {
@@ -143,7 +145,8 @@ p {
  *****************************************************************************/
 
 footer {
-    margin: 40px 0 10px;
+    max-width: 600px;
+    margin: 40px auto 10px;
     padding: 10px;
     border-top: 1px solid darken(@light-color, 5%);
 
