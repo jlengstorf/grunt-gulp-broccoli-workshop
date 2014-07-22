@@ -3,7 +3,7 @@ Grunt, Gulp, and Broccoli Workshop
 
 A sample app to demonstrate capabilities and differences of Grunt, Gulp, and Broccoli.
 
-***NOTE:** This sample app uses [Grunt.js][1]. [Gulp.js][2] and [Broccoli.js][3] equivalents are not included here.*
+**NOTE:** This sample app uses [Grunt.js][1]. [Gulp.js][2] and [Broccoli.js][3] equivalents are not included here.
 
  [1]: http://gruntjs.com/
  [2]: http://gulpjs.com/
