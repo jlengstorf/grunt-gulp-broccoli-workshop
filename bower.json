@@ -1,0 +1,9 @@
+{
+  "name": "grunt-gulp-broccoli-workshop",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "~1.2.20",
+    "angular-route": "~1.2.20"
+  },
+  "devDependencies": {}
+}
