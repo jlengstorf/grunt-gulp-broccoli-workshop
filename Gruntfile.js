@@ -13,14 +13,14 @@ module.exports = function(grunt) {
         options: {
           cleancss: true // Minifies CSS output
         },
-        files: { 'app/css/main.css': 'app/less/{,*/}*.less' }
+        files: { 'app/css/combined-grunt.min.css': 'app/less/{,*/}*.less' }
       }
     },
 
     // Adds vendor prefixes to CSS
     autoprefixer: {
       dist: {
-        src: 'app/css/main.css'
+        src: 'app/css/combined-grunt.min.css'
       }
     },
 
@@ -33,7 +33,10 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: {
-          'app/js/combined.min.js': [ 'app/js/{,*/}*.js', '!app/js/combined.min.js' ]
+          'app/js/combined-grunt.min.js': [
+            'app/js/{,*/}*.js',
+            '!app/js/combined*.js'
+          ]
         }
       }
     },
@@ -42,26 +45,17 @@ module.exports = function(grunt) {
     jshint: {
         dev: {
           options: {
-            '-W097': true, // Ignores "use strict" warning
-            browser: true,
-            devel: true,
-            // laxcomma: true,
-            validthis: true, // Avoids a warning using `this`
-            globals: {
-              angular: true,
-              __dirname: true,
-              require: true,
-              module: true,
-            }
+            jshintrc: true,
+            reporter: require('jshint-stylish'),
           },
-          src: [ '{,*/}*.js', 'app/js/{,*/}*.js', '!app/js/combined.min.js' ]
+          src: [ '{,*/}*.js', 'app/js/{,*/}*.js', '!app/js/combined*.js' ]
         }
     },
 
     // Looks for todo items and collects them in a file for reference
     todo: {
       options: {
-        file: "todo.md"
+        file: "_TODO.md"
       },
       src: [
         '**/*.js',
@@ -88,7 +82,7 @@ module.exports = function(grunt) {
         }
       },
       scripts: {
-        files: [ 'app/js/{,*/}*.js', '!app/js/combined.min.js' ],
+        files: [ 'app/js/{,*/}*.js', '!app/js/combined*.js' ],
         tasks: [ 'jshint:dev', 'uglify:scripts' ]
       },
       server: {
