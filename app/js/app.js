@@ -1,3 +1,4 @@
+/*! Grunt, Gulp, and Broccoli Workshop by Jason Lengstorf */
 'use strict';
 (function(){
 
