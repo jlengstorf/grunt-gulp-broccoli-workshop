@@ -3,17 +3,16 @@ Grunt, Gulp, and Broccoli Workshop
 
 A sample app to demonstrate capabilities and differences of Grunt, Gulp, and Broccoli.
 
-**NOTE:** This sample app uses [Grunt.js][1]. [Gulp.js][2] and [Broccoli.js][3] equivalents are not included here.
+**NOTE:** This sample app uses [Grunt.js][1] and [Gulp.js][2].
 
  [1]: http://gruntjs.com/
  [2]: http://gulpjs.com/
- [3]: https://github.com/broccolijs/broccoli
 
 
 Installation
 ------------
 
-This project assumes you have [Node.js][4] and [Bower][5] installed.
+This project assumes you have [Node.js][3] and [Bower][4] installed.
 
 Clone the repo or download the latest release, then navigate to the project root and run:
 
@@ -21,12 +20,19 @@ Clone the repo or download the latest release, then navigate to the project root
     bower install
     grunt server
 
- [4]: http://nodejs.org/
- [5]: http://bower.io/
+ [3]: http://nodejs.org/
+ [4]: http://bower.io/
 
 
 Changelog
 ---------
+
+### 0.2.0
+
+* Updated Gruntfile.js to use Grunt-specific names
+* Updated files to reference Grunt-/Gulp-specific names
+* Added a gulpfile.js
+* Minor refactoring and tweaks
 
 ### 0.1.0
 
